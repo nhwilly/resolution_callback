@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       /// *******************************************************
       /// to demonstrate this problem, comment out the line below
       /// *******************************************************
-      locale: const Locale('es','ES'),
+      // locale: const Locale('es','ES'),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
