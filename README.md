@@ -50,5 +50,5 @@ We are building a kiosk app with Flutter.
 
 The `MaterialApp` is rebuilt when the user changes and, using the user's language preferences and the `locale` property, we can change locales even when the `localeListResolutionCallback` isn't triggered.  This allows us to address a multilingual user base from a single, shared device.
 
-However, we are using the same part of this app on a user's personal device and wish to respond to their changes in locale preferences properly.  This is where problem #2 gets ugly.  Effectively, the second call that's triggered tells us the device only supports one locale.
+However, we are using the same part of this app on a user's personal device and wish to respond to their changes in locale preferences properly.  This is where problem #2 gets ugly.  Effectively, the second call that's triggered on startup tells us the device only supports one locale.
 
