@@ -44,6 +44,9 @@ I/flutter ( 3367):   locales: [es_US]
 I/flutter ( 3367):   supportedLocales: [en_US, es_US, es_ES]
 ```
    
+# Platforms Tested
+Android Emulator
+Galaxy SM G930V
 
 # Why this matters
 We are building a kiosk app with Flutter.  
