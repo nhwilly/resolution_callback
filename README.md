@@ -13,7 +13,7 @@ This is unnecessary, but when coupled with problem #2, can cause other problems.
 # Problem 2 - Callback fires multiple times with incorrect device locales when language changes
 If the `locale` property is set manually, the callback fires twice, both on startup *and* when a language preference change is made.
 
-Importantly, the second time it fires the `locales` list only includes the value of the manually set `locale` property and not the list as it does during the first call.
+Importantly, at startup the second time it fires the `locales` list only includes the value of the manually set `locale` property and not the list as it does during the first call.
 
 Subsequent alterations to language preferences behave as documented, although they all fire twice.
 
@@ -32,7 +32,7 @@ Subsequent alterations to language preferences behave as documented, although th
    3. Note that `localeListResolutionCallback` fires twice but the first time contains two locales and the second time contains only the locale that was assigned to the `locale` property.
    4. Launch the device settings control panel and change the order of the language preferences.
    4. Return to the app
-   5. Note that `localeListResolutionCallback` fires twice but still contains the proper values.
+   5. Note that `localeListResolutionCallback` fires twice but now contains the proper values.
 
 ## Example of Problem #2 - 4.3
 ```
@@ -45,8 +45,8 @@ I/flutter ( 3367):   supportedLocales: [en_US, es_US, es_ES]
 ```
    
 # Platforms Tested
-Android Emulator
-Galaxy SM G930V
+- Android Emulator
+- Galaxy SM G930V
 
 # Why this matters
 We are building a kiosk app with Flutter.  
